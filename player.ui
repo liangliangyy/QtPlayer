@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Player</class>
+ <widget class="QMainWindow" name="Player">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MultiMedia Player</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../test/1.png</normaloff>../test/1.png</iconset>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pbPlay">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>470</y>
+      <width>90</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Play</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../test/1.png</normaloff>../test/1.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbPause">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>470</y>
+      <width>90</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pause</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbStop">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>470</y>
+      <width>90</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stop</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="lvPlayList">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>0</y>
+      <width>231</width>
+      <height>561</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="Phonon::VolumeSlider" name="volumeSlider">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>470</y>
+      <width>120</width>
+      <height>32</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen_URI"/>
+    <addaction name="separator"/>
+    <addaction name="actionAttribute"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionScreenshot"/>
+    <addaction name="separator"/>
+    <addaction name="actionClear_play_list"/>
+   </widget>
+   <widget class="QMenu" name="menuSearch">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionFull_screen"/>
+    <addaction name="separator"/>
+    <addaction name="actionNormal_screen"/>
+    <addaction name="separator"/>
+    <addaction name="actionHide_play_list"/>
+    <addaction name="separator"/>
+    <addaction name="actionShow_lrc_2"/>
+   </widget>
+   <widget class="QMenu" name="menuVoice">
+    <property name="title">
+     <string>Voice</string>
+    </property>
+    <addaction name="actionTurn_up"/>
+    <addaction name="separator"/>
+    <addaction name="actionTurn_down"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuSearch"/>
+   <addaction name="menuVoice"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionOpen_URI">
+   <property name="text">
+    <string>Open URI</string>
+   </property>
+  </action>
+  <action name="actionAttribute">
+   <property name="text">
+    <string>Attribute</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionScreenshot">
+   <property name="text">
+    <string>Screenshot</string>
+   </property>
+  </action>
+  <action name="actionClear_play_list">
+   <property name="text">
+    <string>Clear play-list</string>
+   </property>
+  </action>
+  <action name="actionFull_screen">
+   <property name="text">
+    <string>Full screen</string>
+   </property>
+  </action>
+  <action name="actionNormal_screen">
+   <property name="text">
+    <string>Default screen</string>
+   </property>
+  </action>
+  <action name="actionTurn_up">
+   <property name="text">
+    <string>turn up</string>
+   </property>
+  </action>
+  <action name="actionTurn_down">
+   <property name="text">
+    <string>turn down</string>
+   </property>
+  </action>
+  <action name="actionHide_play_list">
+   <property name="text">
+    <string>Hide play-list</string>
+   </property>
+  </action>
+  <action name="actionShow_lrc">
+   <property name="text">
+    <string>show lrc</string>
+   </property>
+  </action>
+  <action name="actionShow_lrc_2">
+   <property name="text">
+    <string>show lrc</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Phonon::VolumeSlider</class>
+   <extends>QWidget</extends>
+   <header location="global">phonon/volumeslider.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pbPlay</sender>
+   <signal>clicked()</signal>
+   <receiver>Player</receiver>
+   <slot>on_pbPlay_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>508</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbPause</sender>
+   <signal>clicked()</signal>
+   <receiver>Player</receiver>
+   <slot>on_pbPause_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>184</x>
+     <y>508</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbStop</sender>
+   <signal>clicked()</signal>
+   <receiver>Player</receiver>
+   <slot>on_pbStop_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>508</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClear_play_list</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>clearPlayList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionScreenshot</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>myGrabWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTurn_down</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>decSound()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFull_screen</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>fullNormalScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTurn_up</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>incSound()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionNormal_screen</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>fullNormalScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionNormal_screen</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFull_screen</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>showFullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHide_play_list</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>hideShowListView()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpen</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>setPath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpen_URI</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>uriOpenFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAttribute</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>Player</receiver>
+   <slot>showProperty()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lvPlayList</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>Player</receiver>
+   <slot>selectedMoviePlay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>685</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_pbPlay_clicked()</slot>
+  <slot>on_pbPause_clicked()</slot>
+  <slot>on_pbStop_clicked()</slot>
+  <slot>setPath()</slot>
+  <slot>incSound()</slot>
+  <slot>decSound()</slot>
+  <slot>myGrabWindow()</slot>
+  <slot>hideShowListView()</slot>
+  <slot>showProperty()</slot>
+  <slot>uriOpenFile()</slot>
+  <slot>fullNormalScreen()</slot>
+  <slot>clearPlayList()</slot>
+  <slot>selectedMoviePlay()</slot>
+ </slots>
+</ui>
