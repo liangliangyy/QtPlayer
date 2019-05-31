@@ -2,12 +2,12 @@
 这个播放器是大学时候做的毕业设计，使用qt+phonon实现，支持音视频播放，支持同步显示歌词。  
 ## 主界面:
 启动界面：
-![](https://resource.lylinux.net/image/2019/05/31/541eca6cf298465d886713c60c415e5e.png)
+![](imgs/541eca6cf298465d886713c60c415e5e.png)
 主界面如下图:  
-![](https://resource.lylinux.net/image/2019/05/31/73063431ecc147b6936129ca552f5453.png)
+![](imgs/73063431ecc147b6936129ca552f5453.png)
 
 同步显示歌词:
-![](https://resource.lylinux.net/image/2019/05/31/b49d1d230f3b47d386a8633a47c3ab71.png)
+![](imgs/b49d1d230f3b47d386a8633a47c3ab71.png)
 ## 安装方式:
 以ubuntu为例：
 ### 安装依赖
